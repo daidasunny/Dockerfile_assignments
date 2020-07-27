@@ -1,14 +1,10 @@
 pipeline {
-  agent {
-    dockerfile {
-     
-    }
-  }
+  agent none
+   
   stages {
-    stage("build") {
+    stage("Build") {
       steps {
-        
-        sh 'echo "building docker image"'
+        sh 'docker build -f "Dockerfile" -t myubuntu:20.04'  
       }
     }
   }
