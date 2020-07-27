@@ -1,4 +1,4 @@
-FROM alpine:latest
-RUN apk add openjdk
+FROM ubuntu
+RUN apt-get install openjdk
 
 
