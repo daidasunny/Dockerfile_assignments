@@ -1,4 +1,3 @@
-FROM alpine
-RUN apk add openjdk11
+FROM openjdk:8-jre-alpine
 
 
