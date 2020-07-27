@@ -1,4 +1,4 @@
 FROM alpine:latest
-RUN apk add openjdk
+RUN apk add openjdk11
 
 
