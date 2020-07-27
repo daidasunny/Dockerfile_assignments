@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage("Build") {
       steps {
-        sh 'docker build -f "Dockerfile" -t openjdk:11.0 .'  
+        sh 'docker build -f "Dockerfile" -t alpine:java .'  
       }
     }
   }
