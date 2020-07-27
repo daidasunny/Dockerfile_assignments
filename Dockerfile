@@ -1,4 +1,4 @@
-FROM openjdk:11-alpine
-RUN apk add --no-cache openjdk11
+FROM alpine
+RUN apk add openjdk11
 
 
