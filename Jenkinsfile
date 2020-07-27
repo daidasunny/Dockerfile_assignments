@@ -11,7 +11,7 @@ pipeline {
     }
     stage("build image") {
       steps {
-        sh "docker build -t myubuntu:20.04 .    
+        sh "docker build -t myubuntu:20.04 /var/lib/jenkins/workspace/Dockerfile_excercise2    
       }
     }
   }
