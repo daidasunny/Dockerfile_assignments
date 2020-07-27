@@ -1,8 +1,6 @@
 pipeline {
-  agent {
-    Dockerfile true
-  }
-
+  agent any
+   
   stages {
     stage("cloning git") {
       steps {
