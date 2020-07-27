@@ -1,15 +1,18 @@
 pipeline {
-  agent any
-   
-  stages {
-    stage("cloning git") {
-      steps {
-        git 'https://github.com/daidasunny/Dockerfile_assignments.git'
-      }
+  agent {
+    dockerfile {
+      /*
+       * This assumes that a "Dockerfile" is in the current workspace
+       * A new container will be build with the args below and the pipeline will run inside that container.
+       */
+      args "-v /tmp:/tmp -p 8000:8000"
     }
-    stage("build image") {
+  }
+  stages {
+    stage("Docker Test 1") {
       steps {
-        sh "docker build -t myubuntu:20.04 ."  
+        sh 'echo "hi-there"'
+        sh 'echo "The answer is 42"'
       }
     }
   }
