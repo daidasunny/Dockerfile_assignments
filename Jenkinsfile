@@ -1,15 +1,11 @@
 pipeline {
-  agent {
-    dockerfile {
-      
+    agent { dockerfile true }
+    stages {
+        stage('display') {
+            steps {
+                sh 'ubuntu --version'
+               
+            }
+        }
     }
-  }
-  stages {
-    stage("build") {
-      steps {
-        
-        sh 'echo "building docker image"'
-      }
-    }
-  }
 }
