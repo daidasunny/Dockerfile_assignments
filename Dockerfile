@@ -1,6 +1,6 @@
-FROM openjdk:11-jdk-alpine
+FROM alpine
 LABEL Sunil Daida <sunnyrd815@gmail.com>
-RUN apk add --no-cache curl tar bash
+RUN apt-get install openjdk
 CMD [""]
 
 
